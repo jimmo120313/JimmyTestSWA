@@ -1,0 +1,40 @@
+{
+    "routes": [
+        
+        {
+            "route": "/.auth/login/facebook",
+            "statusCode": "404"
+        },
+        {
+            "route": "/.auth/login/google",
+            "statusCode": "404"
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": "404"
+        },
+        {
+            "route": "/login",
+            "redirect": "/.auth/login/aad"
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        },
+        {
+            "route": "/AdminDashboard",
+            "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/",
+            "allowedRoles": ["authenticated"],
+            "comment":"All user needs to be login"
+        },
+        {
+            "route": "/api",
+            "allowedRoles": ["authenticated"],
+            "comment":"All api needs to be login"
+        }
+
+    ]
+}
