@@ -8,6 +8,7 @@ export default function HomePage(){
             <a href="/.auth/login/github">Github Login Link</a><br/><br/>
 
             <a href="/.auth/me">Check login detail</a><br/>
+            <a href="/api/HttpTrigger1">TriggerAPI</a><br/>
 
         </Container>
     )
