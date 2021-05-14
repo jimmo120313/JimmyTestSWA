@@ -1,6 +1,5 @@
 {
     "routes": [
-        
         {
             "route": "/.auth/login/facebook",
             "statusCode": "404"
@@ -22,10 +21,6 @@
             "redirect": "/.auth/logout"
         },
         {
-            "route": "/AdminDashboard",
-            "allowedRoles": ["authenticated"]
-        },
-        {
             "route": "/",
             "allowedRoles": ["authenticated"],
             "comment":"All user needs to be login"
@@ -41,18 +36,11 @@
       "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
     },
     "responseOverrides": {
-      "400": {
-        "redirect": "/login"
-      },
       "401": {
-        "redirect": "/login",
-        "statusCode": 302
+        "redirect": "/login"
       },
       "403": {
         "redirect": "/login"
-      },
-      "404": {
-        "rewrite": "/login"
       }
-    },
+    }
 }
